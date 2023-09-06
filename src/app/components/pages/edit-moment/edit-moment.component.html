@@ -1,0 +1,14 @@
+<!-- src>app>components>pages>edit-moment>edit-moment.component.html -->
+<div *ngIf="moment">
+  <h2>
+    Editando o momento <span>{{ moment.title }}</span
+    >!
+  </h2>
+  <!-- ainda falta fazer editHandler no arquivo .ts -->
+  <!-- a propriedade momentData não existe no formulário, tem que colocar -->
+  <app-moment-form
+    (onSubmit)="editHandler($event)"
+    [momentData]="moment"
+    [btnText]="btnText"
+  ></app-moment-form>
+</div>
